@@ -1,6 +1,6 @@
 var alphanumeric = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-module.exports = function (length) {
+var nanoId = function (length) {
   if (length == null) {
     length = 10;
   }
@@ -10,3 +10,9 @@ module.exports = function (length) {
   }
   return result;
 };
+
+nanoId.verify = function (nanoId) {
+  return typeof nanoId === 'string' && /^[a-zA-Z0-9]+$/.test(nanoId);
+};
+
+module.exports = nanoId;

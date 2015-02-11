@@ -8,6 +8,16 @@ console.log(nanoId(13));
 // ZyLYucKjwBngU
 ```
 
+Verify given argument is a nanoId:
+```js
+console.log(nanoId.verify('it4wVGtjvm'));
+// true
+
+console.log(nanoId.verify('invalid-id'));
+// false
+
+```
+
 ## License (ISC)
 
 Copyright © 2015, Roman Kivalin.
